@@ -1,0 +1,71 @@
+.section-cta {
+  position: relative;
+  padding-top: 83px;
+  padding-bottom: 84px;
+  @include bgImage("./../img/bg/cta-bg.jpeg");
+
+  &::before {
+    @extend %overlay;
+  }
+    /* Desktop MD */
+  @media (max-width: 1600px) {
+    @include bgImage("./../img/bg/cta-bg-1600.jpeg");
+  }
+
+    /* Tablet */
+  @media (max-width: 1199px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include bgImage("./../img/bg/cta-bg-900.jpeg");
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    @include bgImage("./../img/bg/cta-bg-600.jpeg");
+  }
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    @include bgImage("./../img/bg/cta-bg-320.jpeg");
+  }
+
+
+
+  &__content {
+    position: relative;
+    z-index: 9;
+    color: #fff;
+    text-align: center; 
+
+    
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+
+    span {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+
+  & a{
+    display: inline-block;
+  }
+
+
+
+}
